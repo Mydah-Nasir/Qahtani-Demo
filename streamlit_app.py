@@ -46,7 +46,7 @@ def extract_invoice_data(file_bytes):
             {"mime_type": "application/pdf", "data": file_bytes}
         ]
     )
-    print("Raw Response from model:", response.text)  # Debugging line
+    print("Raw Response:", response.text)  # Debugging line
     try:
         text = response.text.strip()
         json_start = text.find("{")
